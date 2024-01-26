@@ -1,6 +1,9 @@
+import java.util.ArrayList;
+
 public class Employee {
     Name name;
     Department department;
+    ArrayList<Employee> employees = new ArrayList<>();
 
     public Employee(Name name, Department department){
         this.name = name;

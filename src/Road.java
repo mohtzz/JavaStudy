@@ -6,4 +6,9 @@ public class Road {
         this.city = city;
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return city.name + ": " + price;
+    }
 }

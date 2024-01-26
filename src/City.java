@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class City {
     String name;
-    ArrayList<Road> roads;
+    ArrayList<Road> roads = new ArrayList<>();
 
     public City(String name){
         this.name = name;
@@ -10,6 +10,6 @@ public class City {
 
     @Override
     public String toString() {
-        return name + " /n " + roads;
+        return name + " \n " + roads;
     }
 }
