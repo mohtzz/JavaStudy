@@ -2,14 +2,12 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Department it = new Department("IT");
-        Employee petrov = new Employee(new Name("Petrov", null, null), it);
-        Employee kozlov = new Employee(new Name("Kozlov", null, null), it);
-        Employee sidorov = new Employee(new Name("Sidorov", null, null), it);
-        it.boss = kozlov;
-
-//        System.out.println(sidorov.employees);
-//        System.out.println(kozlov.employees);
-
+        Square sq = new Square(new Point(5, 3), 23);
+        Polyline p1 = sq.buildSquare();
+        System.out.println(p1);
+        System.out.println(p1.getLength());
+        p1.dots.set(p1.dots.size() - 1, new Point(15, 25));
+        System.out.println(p1);
+        System.out.println(p1.getLength());
     }
 }
