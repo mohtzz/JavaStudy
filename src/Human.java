@@ -1,13 +1,14 @@
 public class Human {
-    String nameString;
-    Name name;
+    private String nameString;
+    private Name name;
     int height;
 
-    Human father;
+    private Human father;
 
     public Human(Name name, int height, Human father){
         this.name = name;
         this.height = height;
+        if(this.height > 500 || this.height < 0) throw new IllegalArgumentException("height must be more than 0 and less than 500");
         this.father = father;
 
         if(this.father.name != null) {
@@ -48,6 +49,20 @@ public class Human {
     public Human(Name name, int height){
         this.name = name;
         this.height = height;
+    }
+
+    public Human getFather() {
+        return father;
+    }
+    public int getHeight() {
+        return height;
+    }
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public Name getName() {
+        return name;
     }
 
     @Override

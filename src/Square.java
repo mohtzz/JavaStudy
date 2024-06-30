@@ -1,7 +1,8 @@
 public class Square {
     Point upperLeft;
-    int lengthOfSide;
+    private int lengthOfSide;
     public Square(Point upperLeft, int lengthOfSide){
+        if(lengthOfSide < 0) throw new IllegalArgumentException("length of side must be positive");
         this.upperLeft = upperLeft;
         this.lengthOfSide = lengthOfSide;
     }
@@ -17,6 +18,16 @@ public class Square {
                         this.upperLeft.y + lengthOfSide),
                 new Point(this.upperLeft.x - lengthOfSide, this.upperLeft.y));
     }
+
+    public int getLengthOfSide() {
+        return lengthOfSide;
+    }
+
+    public void setLengthOfSide(int lengthOfSide) {
+        if(lengthOfSide < 0) throw new IllegalArgumentException("length of side must be positive");
+        this.lengthOfSide = lengthOfSide;
+    }
+
     @Override
     public String toString() {
         return "Квадрат в точке " + upperLeft + " со стороной " + lengthOfSide;

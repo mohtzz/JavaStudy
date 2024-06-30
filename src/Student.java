@@ -8,7 +8,7 @@ public class Student {
         this.name = name;
         if(marks != null) {
             for (int i = 0; i < marks.length; i++) {
-                this.marks.add(marks[i]);
+                if(marks[i] >= 2 && marks[i] <= 5) this.marks.add(marks[i]);
             }
         }
     }
@@ -30,6 +30,11 @@ public class Student {
         }
         else return false;
     }
+
+    public ArrayList<Integer> getMarks() {
+        return marks;
+    }
+
     @Override
     public String toString() {
         return name + ": " + marks;
